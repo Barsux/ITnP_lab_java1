@@ -15,7 +15,7 @@ public class Primes{
         //Если число меньше 0 или 0 или 1 то оно будет точно непростым.
         if(n < 2)return false;
         //Нет смысла перебирать все числа в диапазоне от 1 до n, достаточно от 2 до n // 2 + n % 2
-        for(int i = 2; i < (n / 2 + 1); i++) {
+        for(int i = 2; i < (n / 2 + n % 2); i++) {
             if(n % i == 0)return false;
         }
         return true;
